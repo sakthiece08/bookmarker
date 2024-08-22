@@ -19,9 +19,9 @@ public class BookmarkService {
     private final BookmarkRepository bookmarkRepository;
 
     @Transactional(readOnly = true)
-    public List<Bookmark> getBookmarks(Integer page){
+    public BookmarkDTO getBookmarks(Integer page){
         int pageNo = page < 0 ? 0 : page-1;
         Pageable pageable = PageRequest.of(pageNo, 8, Sort.Direction.DESC, "createdAt");
-        return bookmarkRepository.findAll(pageable).getContent();
+        return new BookmarkDTO(bookmarkRepository.findAll(pageable));
     }
 }
