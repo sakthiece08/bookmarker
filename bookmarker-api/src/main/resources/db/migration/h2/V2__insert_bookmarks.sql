@@ -1,0 +1,9 @@
+insert into bookmarks (title, url, created_date_time) values ('SpringBlog','https://spring.io/blog',CURRENT_TIMESTAMP());
+insert into bookmarks (title, url, created_date_time) values ('Reddit','https://www.reddit.com/r/Blogging/',CURRENT_TIMESTAMP());
+insert into bookmarks (title, url, created_date_time) values ('GoogleBlog','https://blog.google/intl/en-ca/',CURRENT_TIMESTAMP());
+insert into bookmarks (title, url, created_date_time) values ('Hostinger','https://www.hostinger.com/tutorials/blog-examples',CURRENT_TIMESTAMP());
+insert into bookmarks (title, url, created_date_time) values ('K8s','https://kubernetes.io/blog/',CURRENT_TIMESTAMP());
+insert into bookmarks (title, url, created_date_time) values ('Oracle','https://blogs.oracle.com/java/',CURRENT_TIMESTAMP());
+insert into bookmarks (title, url, created_date_time) values ('Baeldung','https://www.baeldung.com/java-blogs',CURRENT_TIMESTAMP());
+insert into bookmarks (title, url, created_date_time) values ('Medium','https://medium.com/',CURRENT_TIMESTAMP());
+insert into bookmarks (title, url, created_date_time) values ('Microsoft','https://tech.feedspot.com/microsoft_blogs/',CURRENT_TIMESTAMP());
