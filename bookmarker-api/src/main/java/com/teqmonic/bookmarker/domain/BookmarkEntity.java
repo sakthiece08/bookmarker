@@ -2,7 +2,6 @@ package com.teqmonic.bookmarker.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.boot.autoconfigure.web.WebProperties;
 
 import java.time.Instant;
 
@@ -13,7 +12,7 @@ import java.time.Instant;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Bookmark {
+public class BookmarkEntity {
 
     @Id
     @SequenceGenerator(name = "bm_id_seq_gen", sequenceName = "bm_id_seq")

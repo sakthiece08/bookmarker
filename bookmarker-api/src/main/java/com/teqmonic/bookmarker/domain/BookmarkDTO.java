@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
@@ -14,7 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 public class BookmarkDTO {
 
-    private List<Bookmark> data;
+    private List<BookmarksDTO> data;
     private long totalElements;
     private int totalPages;
     private int currentPage;
@@ -25,7 +24,7 @@ public class BookmarkDTO {
     private boolean hasPrev;
     private boolean hasNext;
 
-    public BookmarkDTO(Page<Bookmark> page) {
+    public BookmarkDTO(Page<BookmarksDTO> page) {
         this.setData(page.getContent());
         this.setTotalElements(page.getTotalElements());
         this.setTotalPages(page.getTotalPages());

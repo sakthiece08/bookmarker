@@ -1,14 +1,10 @@
 package com.teqmonic.bookmarker.initializer;
 
-import com.teqmonic.bookmarker.domain.Bookmark;
 import com.teqmonic.bookmarker.domain.BookmarkRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-
-import java.time.Instant;
-import java.util.List;
 
 @Component
 @RequiredArgsConstructor
