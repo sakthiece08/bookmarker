@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface BookmarkRepository extends JpaRepository<BookmarkEntity, Long> {
 
-    @Query("select new com.teqmonic.bookmarker.domain.Bookmark(b.id, b.title, b.url) from BookmarkEntity b")
+    @Query("select new com.teqmonic.bookmarker.domain.BookmarksDTO(b.id, b.title, b.url) from BookmarkEntity b")
     Page<BookmarksDTO> findBookmarks(Pageable pageable);
 }
