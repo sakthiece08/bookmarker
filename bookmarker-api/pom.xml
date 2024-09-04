@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.teqmonic</groupId>
-	<artifactId>bookmarker</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>bookmarker</name>
-	<description>Spring Boot bookmarker</description>
+	<artifactId>bookmarker-api</artifactId>
+	<version>0.0.1</version>
+	<name>bookmarker API</name>
+	<description>Spring Boot bookmarker api</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -28,6 +28,8 @@
 	</scm>
 	<properties>
 		<java.version>21</java.version>
+		<dockerUserName>sakthiece08</dockerUserName>
+		<dockerImageName>${dockerUserName}/${project.artifactId}</dockerImageName>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -110,7 +112,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<image>
-						<name>sakthiece08/${artifactId}:${version}</name>
+						<name>${dockerImageName}:${version}</name>
 					</image>
 					<excludes>
 						<exclude>
@@ -120,6 +122,30 @@
 					</excludes>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>jib-maven-plugin</artifactId>
+				<version>3.4.3</version>
+				<configuration>
+					<from>
+						<image>eclipse-temurin:21-jre</image>
+					</from>
+					<to>
+						<image>${dockerImageName}</image>
+						<tags>
+							<tag>latest</tag>
+							<tag>${project.version}</tag>
+						</tags>
+					</to>
+					<container>
+						<ports>
+							<port>8080</port>
+						</ports>
+					</container>
+				</configuration>
+			</plugin>
+
 		</plugins>
 	</build>
 
