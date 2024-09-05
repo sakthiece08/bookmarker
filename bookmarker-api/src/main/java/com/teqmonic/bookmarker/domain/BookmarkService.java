@@ -23,4 +23,11 @@ public class BookmarkService {
        // return new BookmarkDTO(bookmarkRepository.findAll(pageable).map(bookmarkMapper::convertToBookmark));
         return new BookmarkDTO(bookmarkRepository.findBookmarks(pageable));
     }
+
+    @Transactional(readOnly = true)
+    public BookmarkDTO searchBookmarks(String query, Integer page) {
+        int pageNo = page < 0 ? 0 : page-1;
+        Pageable pageable = PageRequest.of(pageNo, 8, Sort.Direction.DESC, "createdAt");
+        return new BookmarkDTO(bookmarkRepository.findByTitleContainsIgnoreCase(query, pageable));
+    }
 }
