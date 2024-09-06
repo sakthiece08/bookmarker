@@ -30,4 +30,10 @@ public class BookmarkService {
         Pageable pageable = PageRequest.of(pageNo, 8, Sort.Direction.DESC, "createdAt");
         return new BookmarkDTO(bookmarkRepository.findByTitleContainsIgnoreCase(query, pageable));
     }
+
+    public BookmarksDTO createBookmark(CreateBookmarkRequest request) {
+        BookmarkEntity entity = bookmarkMapper.convertToEntity(request);
+        BookmarkEntity responseEntity = bookmarkRepository.save(entity);
+        return bookmarkMapper.convertToBookmark(responseEntity);
+    }
 }
