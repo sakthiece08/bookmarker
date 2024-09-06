@@ -42,7 +42,15 @@ java=21.0.2-tem
 maven=3.9.6
 ```
 This would default to above software versions when we CD into the particular workspace directory. 
-
 SDKMAN! is a tool to manage parallel versions of multiple SDKs, which SDKMAN! call “candidates”.
+
+Refer the source code for below implementations:
+* Flyway migration
+* Spring Data JPA DTO Projections
+* Integration Testing using Test Containers
+* Dockerization of application
+* GitHub Actions
+* problem-spring-web
+
 
 
