@@ -50,7 +50,28 @@ Refer the source code for below implementations:
 * Integration Testing using Test Containers
 * Dockerization of application
 * GitHub Actions
-* problem-spring-web
+* problem-spring-web 
+    ```
+  <dependency>
+    <groupId>org.zalando</groupId>
+    <artifactId>problem-spring-web-starter</artifactId>
+    <version>0.29.1</version>
+  </dependency>
+  
+  Response:
+  {
+    "type": "https://zalando.github.io/problem/constraint-violation",
+    "status": 400,
+    "violations": [
+        {
+            "field": "title",
+            "message": "Title should not be empty"
+        }
+    ],
+    "title": "Constraint Violation"
+}
+    ```
+* Docker compose
 
 
 
