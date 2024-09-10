@@ -84,6 +84,8 @@ Refer the source code for below implementations:
    ```
 
 ## How to run?
+ Note: Please start Docker desktop in the system
+
 ```shell
 $ git clone https://github.com/sakthiece08/bookmarker.git
 $ cd bookmarker
