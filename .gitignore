@@ -1,3 +1,5 @@
 /target/
 bookmarker-api/target/
 /.idea/
+/.DS_Store
+bookmarker-api/**/.DS_Store
