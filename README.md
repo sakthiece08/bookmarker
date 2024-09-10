@@ -69,9 +69,33 @@ Refer the source code for below implementations:
         }
     ],
     "title": "Constraint Violation"
-}
+  }
     ```
 * Docker compose
+* Shell script to start/stop application instead of using Docker compose commands directly
+   ```
+   chmod +x run.sh
+  
+   ./run.sh start
+   ./run.sh stop
+   ./run.sh start_infra
+   ./run.sh stop_infra
+   ./run.sh restart
+   ```
+
+## How to run?
+```shell
+$ git clone https://github.com/sakthiece08/bookmarker.git
+$ cd bookmarker
+
+$ ./run.sh start
+$ ./run.sh stop
+```
+#### To start only infra
+```shell
+$ ./run.sh start_infra
+$ ./run.sh stop_infra
+```
 
 
 

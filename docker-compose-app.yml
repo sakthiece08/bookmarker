@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  bookmarker-app:
+    build:
+      context: bookmarker-api # indicates Dockerfile is in bookmarker-api directory
+      dockerfile: Dockerfile
+    container_name: bookmarker-app-container
+    depends_on:
+      - bookmarker-db
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+     # - SPRING_DATASOURCE_DRIVER_CLASS_NAME= org.postgresql.Driver
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://bookmarker-db:5432/${POSTGRES_DB}
+      - SPRING_DATASOURCE_USERNAME=${POSTGRES_USER}
+      #- SPRING_DATASOURCE_PASSWORD=postgres # it would be picked up from application.properties
+    restart: no

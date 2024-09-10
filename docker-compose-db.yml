@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  bookmarker-db:
+    image: postgres:15.8-alpine
+    container_name: bookmarker-postgresql-container
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    ports:
+      - "15432:5432"
