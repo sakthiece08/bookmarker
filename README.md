@@ -101,7 +101,9 @@ $ ./run.sh start_infra
 $ ./run.sh stop_infra
 ```
 ## Deployment
+
 * Setting up Kubernetes Kind Cluster
+
 ![img.png](img.png)
 * Deploy app on Kubernetes
 * Install Kubernetes Lens GUI tool - https://k8slens.dev/
