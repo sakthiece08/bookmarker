@@ -84,6 +84,7 @@ Refer the source code for below implementations:
    ```
 * Dockerizing NextJS application
 * Kubernetes - Pods, ReplicaSet, Deployment, Service, Ingress 
+* Ingress Controller (NGINX)
 
 ## How to run?
  Note: Please start Docker desktop in the system
@@ -102,13 +103,20 @@ $ ./run.sh stop_infra
 ```
 ## Deployment
 
-* Setting up Kubernetes Kind Cluster
+* Setting up Kubernetes Kind Cluster. 
+  ```
+   cd /kind
+   chmod +x create-cluster.sh 
+   ./create-cluster.sh
+  ```
 
 ![img.png](images/cluster.png)
 * Deploy app on Kubernetes
+  ```
+   cd /k8s
+   kubectl apply -f . 
+  ```
 * Install Kubernetes Lens GUI tool - https://k8slens.dev/
-* Ingress Controller (NGINX)
-
 
 
 ### References
