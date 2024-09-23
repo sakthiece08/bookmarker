@@ -22,7 +22,7 @@
 - Using Lens as K8s GUI   
 
 ### Tools
-![img.png](tools.png)
+![tools.png](images/tools.png)
 
 ### Workspace setup
 #### Install Maven wrapper:
@@ -104,7 +104,7 @@ $ ./run.sh stop_infra
 
 * Setting up Kubernetes Kind Cluster
 
-![img.png](img.png)
+![img.png](images/cluster.png)
 * Deploy app on Kubernetes
 * Install Kubernetes Lens GUI tool - https://k8slens.dev/
 
