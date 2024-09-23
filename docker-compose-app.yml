@@ -16,3 +16,14 @@ services:
       - SPRING_DATASOURCE_USERNAME=${POSTGRES_USER}
       #- SPRING_DATASOURCE_PASSWORD=postgres # it would be picked up from application.properties
     restart: no
+
+  bookmarker-ui-nextjs:
+    container_name: bookmarker-ui-nextjs
+    build:
+      context: bookmarker-ui-nextjs
+      dockerfile: Dockerfile
+    ports:
+      - "13000:3000"
+    environment:
+      SERVER_SIDE_API_BASE_URL: http://bookmarker-api:8080
+      CLIENT_SIDE_API_BASE_URL: http://localhost:8080

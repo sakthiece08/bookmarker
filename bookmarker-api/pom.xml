@@ -29,7 +29,7 @@
 	<properties>
 		<java.version>21</java.version>
 		<dockerUserName>sakthiece08</dockerUserName>
-		<dockerImageName>${dockerUserName}/${project.artifactId}</dockerImageName>
+		<dockerImageName>${dockerUserName}/${project.artifactId}:${project.version}</dockerImageName>
 	</properties>
 	<dependencies>
 		<dependency>

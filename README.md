@@ -9,7 +9,7 @@
 - GitHub Actions CI/CD
 
 ### FRONTEND
-- Build UI using ReactJS/NextJS
+- Build UI using ReactJS/NextJS (version 14)
 - Bootstrap CSS
 - Axios for API communication
 
@@ -48,7 +48,7 @@ Refer the source code for below implementations:
 * Flyway migration
 * Spring Data JPA DTO Projections
 * Integration Testing using Test Containers
-* Dockerization of application
+* Dockerizing backend application
 * GitHub Actions
 * problem-spring-web 
     ```
@@ -82,6 +82,8 @@ Refer the source code for below implementations:
    ./run.sh stop_infra
    ./run.sh restart
    ```
+* Dockerizing NextJS application
+* Kubernetes - Pods, ReplicaSet, Deployment, Service, Ingress 
 
 ## How to run?
  Note: Please start Docker desktop in the system
@@ -98,6 +100,19 @@ $ ./run.sh stop
 $ ./run.sh start_infra
 $ ./run.sh stop_infra
 ```
+## Deployment
+* Setting up Kubernetes Kind Cluster
+![img.png](img.png)
+* Deploy app on Kubernetes
+* Install Kubernetes Lens GUI tool - https://k8slens.dev/
+
+
+
+### References
+  https://axios-http.com/docs/intro
+  https://kind.sigs.k8s.io/
+
+
 
 
 
