@@ -107,6 +107,7 @@ $ ./run.sh stop_infra
 ![img.png](images/cluster.png)
 * Deploy app on Kubernetes
 * Install Kubernetes Lens GUI tool - https://k8slens.dev/
+* Ingress Controller (NGINX)
 
 
 

@@ -7,3 +7,4 @@ insert into bookmarks (title, url, created_date_time) values ('Oracle','https://
 insert into bookmarks (title, url, created_date_time) values ('Baeldung','https://www.baeldung.com/java-blogs',CURRENT_TIMESTAMP);
 insert into bookmarks (title, url, created_date_time) values ('Medium','https://medium.com/',CURRENT_TIMESTAMP);
 insert into bookmarks (title, url, created_date_time) values ('Microsoft','https://tech.feedspot.com/microsoft_blogs/',CURRENT_TIMESTAMP);
+insert into bookmarks (title, url, created_date_time) values ('SivaLabs','https://www.sivalabs.in/',CURRENT_TIMESTAMP);

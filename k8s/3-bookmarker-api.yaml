@@ -31,7 +31,9 @@ spec:
     spec:
       containers:
        - name: bookmarker-api
-         image: sakthiece08/bookmarker-api:0.0.1
+         image: sakthiece08/bookmarker-api:2.0
+         ports:
+           - containerPort: 8080
          env:
           - name: SPRING_PROFILES_ACTIVE
             value: k8s
